@@ -35,13 +35,7 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 
         <div v-if="actions" class="actions">
           <div v-for="action in actions" :key="action.link" class="action">
-            <VPButton
-              tag="a"
-              size="medium"
-              :theme="action.theme"
-              :text="action.text"
-              :href="action.link"
-            />
+            <VPButton tag="a" size="medium" :theme="action.theme" :text="action.text" :href="action.link" />
           </div>
         </div>
       </div>
@@ -145,6 +139,7 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 }
 
 @media (min-width: 640px) {
+
   .name,
   .text {
     max-width: 576px;
@@ -154,10 +149,11 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 }
 
 @media (min-width: 960px) {
+
   .name,
   .text {
     line-height: 64px;
-    font-size: 56px;
+    font-size: 52px;
   }
 
   .VPHero.has-image .name,

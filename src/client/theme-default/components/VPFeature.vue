@@ -17,20 +17,15 @@ defineProps<{
 <template>
   <VPLink class="VPFeature" :href="link" :rel="rel" :no-icon="true" :tag="link ? 'a' : 'div'">
     <article class="box">
-      <VPImage
-        v-if="typeof icon === 'object'"
-        :image="icon"
-        :alt="icon.alt"
-        :height="icon.height"
-        :width="icon.width"
-      />
+      <VPImage v-if="typeof icon === 'object'" :image="icon" :alt="icon.alt" :height="icon.height" :width="icon.width" />
       <div v-else-if="icon" class="icon" v-html="icon"></div>
       <h2 class="title" v-html="title"></h2>
       <p v-if="details" class="details" v-html="details"></p>
 
       <div v-if="linkText" class="link-text">
         <p class="link-text-value">
-          {{ linkText }} <VPIconArrowRight class="link-text-icon" />
+          {{ linkText }}
+          <VPIconArrowRight class="link-text-icon" />
         </p>
       </div>
     </article>

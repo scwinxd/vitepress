@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export default defineConfig({
   lang: 'en-US',
-  title: 'VitePress',
+  title: '屹爱科技',
   description: 'Vite & Vue powered static site generator.',
 
   lastUpdated: true,
@@ -40,14 +40,14 @@ export default defineConfig({
       '/reference/': sidebarReference()
     },
 
-    editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+    //   text: 'Edit this page on GitHub'
+    // },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ],
+    // socialLinks: [
+    //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    // ],
 
     footer: {
       message: 'Released under the MIT License.',
@@ -72,24 +72,21 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
+    { text: '首页', link: '/', activeMatch: '/' },
     {
-      text: 'Reference',
-      link: '/reference/site-config',
-      activeMatch: '/reference/'
+      text: '开发指南',
+      link: 'http://thinkeditor.com:8181/docs/thinkeditor-manual-v2/enter'
     },
     {
-      text: pkg.version,
-      items: [
-        {
-          text: 'Changelog',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        },
-        {
-          text: 'Contributing',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        }
-      ]
+      text: '开发手册',
+      link: 'http://thinkeditor.com:8181/docs/thinkeditor-manual-v2/enter'
+    },
+    //{ text: '设计手册', link: '/reference/site-config', activeMatch: '/reference/' },
+    //{ text: '集成手册', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
+    { text: '关于我们', link: '/about', activeMatch: '/' },
+    {
+      text: '更新日志',
+      link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
     }
   ]
 }

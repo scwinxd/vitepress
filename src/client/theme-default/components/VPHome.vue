@@ -7,8 +7,12 @@ import VPHomeFeatures from './VPHomeFeatures.vue'
   <div class="VPHome">
     <slot name="home-hero-before" />
     <VPHomeHero>
-      <template #home-hero-info><slot name="home-hero-info" /></template>
-      <template #home-hero-image><slot name="home-hero-image" /></template>
+      <template #home-hero-info>
+        <slot name="home-hero-info" />
+      </template>
+      <template #home-hero-image>
+        <slot name="home-hero-image" />
+      </template>
     </VPHomeHero>
     <slot name="home-hero-after" />
 
@@ -16,13 +20,23 @@ import VPHomeFeatures from './VPHomeFeatures.vue'
     <VPHomeFeatures />
     <slot name="home-features-after" />
 
-    <Content />
+    <!-- <Content class="Content" /> -->
+    <div class="main">
+      <Content class="vp-doc"/>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .VPHome {
   padding-bottom: 96px;
+}
+
+.main {
+  /* text-align: center; */
+  padding-top: 64px;
+  margin: 0 auto;
+  max-width: 1152px;
 }
 
 .VPHome :deep(.VPHomeSponsors) {
